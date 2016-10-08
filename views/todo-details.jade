@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    form(action="/change-todo-state/#{todo.id}", method="post", enctype="multipart/form-data")
+        div
+            if todo.image
+                img(src='/#{todo.image}' alt='image')
+        div
+            strong Title: #{todo.title}
+        div
+            strong Title: #{todo.description}
+        div
+            strong Title: #{todo.state}
+        div
+            if todo.state.toLowerCase() === 'pending'
+                input(type='submit',value='Done')
+            else
+                input(type='submit',value='Pending')
+
+    div
+        form(action="/add-todo-comment/#{todo.id}", method="post", enctype="multipart/form-data")
+            div
+                textarea(name="comments")
+            div
+                input(type='submit', value='Add Comment')
+
+    div
+        a(href='/details/#{todo.id}/comments') View TODO Comments

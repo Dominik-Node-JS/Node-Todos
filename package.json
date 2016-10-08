@@ -1,0 +1,22 @@
+{
+  "name": "node-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "4.5.x",
+    "npm": "2.15.x"
+  },
+  "author": "KL",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-busboy": "0.0.2",
+    "jade": "1.11.0",
+    "serve-favicon": "^2.3.0",
+    "standard": "8.3.0"
+  }
+}

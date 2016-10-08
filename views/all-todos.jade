@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+        #todos
+            ul
+                each todo in allTodos
+                    li 
+                        a(href='/details/' + todo.id) #{todo.title}
+                        div 
+                            strong Description- 
+                            span #{todo.description}
+                        div 
+                            strong State- 
+                            span #{todo.state}
+                             

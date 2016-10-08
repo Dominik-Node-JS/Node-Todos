@@ -1,0 +1,9 @@
+extends layout
+
+block content
+
+            h3 Todo's comments
+            
+            each comment in comments
+                if comment.trim() !== ''
+                    p=comment

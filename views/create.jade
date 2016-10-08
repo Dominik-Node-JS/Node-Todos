@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    form(action="/create-todo", method="post", enctype="multipart/form-data")
+        div
+        label(for='title') Title
+            input(id='title',type='text',name='title')
+        div
+        label(for='description') Description
+            input(id='description',type='text',name='description')
+        div
+            input(type='file', name='todoImage')
+        div
+        input(type='submit',value='Create Todo')
